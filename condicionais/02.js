@@ -68,9 +68,7 @@ if (x > 0 && y > 0 ||
 } else {
 	console.log(false)
 }
-
 // ou...
-
 if (x > 0 && y > 0) {
 	console.log(true)
 } else if (x < 0 && y < 0) {
@@ -78,9 +76,7 @@ if (x > 0 && y > 0) {
 } else {
 	console.log(false)
 }
-
 // ou...
-
 if (Math.sign(x) === Math.sign(y) && 
 	Math.sign(x) !== 0) {
 	console.log(true)
