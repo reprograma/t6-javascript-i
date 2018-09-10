@@ -19,3 +19,32 @@
 // 		throw "Dia inválido!"
 // }
 
+
+
+
+// Reescreva a próxima expressão usando
+// o operador ternário
+// let rand
+// if (Math.random() > 0.5) {
+// 	rand = true
+// } else {
+// 	rand = false
+// }
+
+
+
+
+
+// Reescreva a próxima expressão usando
+// o operador ternário
+// const r = Math.random() * 256
+// const g = Math.random() * 256
+// const b = Math.random() * 256
+// let color
+// if (r > g && r > b) {
+// 	color = "Vermelho"
+// } else if (g > b && g > r) {
+// 	color = "Verde"
+// } else if (b > r && b > g) {
+// 	color = "Azul"
+// }

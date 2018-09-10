@@ -1,5 +1,5 @@
 // Escreva a expressão em
-// javascript que atribui o
+// Javascript que atribui o
 // valor `1` a `x` se `x`
 // for maior do que `y`.
 
@@ -32,8 +32,8 @@
 
 
 // Escreva a expressão em
-// Javascript que retorna `true`
-// dois números forem positivos
+// Javascript que retorna `true` 
+// se dois números forem positivos
 // e `false` se dois números 
 // forem negativos.
 
