@@ -1,6 +1,6 @@
-const a = 1
-const b = 2
-const c = 3
+let a = 1
+let b = 2
+let c = 3
 
 // Resultado: "Hello, world!"
 if (6 < 2 * 5) { // 6 < 10
