@@ -1,6 +1,7 @@
 // Escreva um loop em Javascript
 // que vai calcular a soma de todos
 // os números entre 0 e 300.
+<<<<<<< HEAD
 let soma = 0
 for (let i = 0; i <= 300; i++) {
 	soma += i // soma = soma + i
@@ -13,6 +14,12 @@ for (let i = 0; i <= 300; i++) {
 // 4 iteracao -> soma = 3; i = 3 -> soma = 3 + 3 = 6
 // 5 iteracao -> soma = 6; i = 4 // PARA
 // FINAL -> soma = 6
+=======
+// exemplo: 0 + 1 + 2 + 3 + ... + 300
+
+
+
+>>>>>>> 0c626f5... loops: esclarece enunciado no exercicio 01
 
 // Escreva um loop em Javascript
 // que vai calcular a seguinte soma:
