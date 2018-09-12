@@ -5,18 +5,6 @@ let soma = 0
 for (let i = 0; i <= 300; i++) {
 	soma += i // soma = soma + i
 }
-for (let i = 0; i <= 300; i++) {
-	soma += i // soma = soma + i
-}
-for (let i = 0; i <= 300; i++) {
-	soma += i // soma = soma + i
-}
-for (let i = 0; i <= 300; i++) {
-	soma += i // soma = soma + i
-}
-for (let i = 0; i <= 300; i++) {
-	soma += i // soma = soma + i
-}
 
 // para maximo = 3
 // 1 iteracao -> soma = 0; i = 0 -> soma = 0 + 0 = 0
@@ -96,7 +84,6 @@ for (let i = 1; i <= fatorial; i++) {
 	aux *= i
 }
 
-
 // Escreva um loop em Javascript que 
 // calcula quantos termos a soma
 // 1 + 2 + 3 + ... precisa para
@@ -107,8 +94,6 @@ while (soma <= 1000000) {
 	i++ // i = i + 1
 	soma += i
 }
-console.log("termos", i)
-console.log("soma", soma)
 
 // Escreva um loop em Javascript que
 // simule o problema 3x + 1 para o número 5.
@@ -120,10 +105,37 @@ console.log("soma", soma)
 // multiplicar por 3 e adicionar 1 (*3+1).
 // Desta forma, por exemplo, se a sequência 
 // iniciar com o número 5 ter-se-á: 5; 16; 8; 4; 2; 1".
+let collatz = 5
+while (collatz > 1) {
+	if (collatz % 2 === 0) {
+		collatz = collatz / 2
+	} else {
+		collatz = collatz * 3 + 1 
+	}
+}
+
+// 1 iteracao -> collatz = 5; IMPAR collatz = 5 * 3 + 1 = 16
+// 2 iteracao -> collatz = 16; PAR collatz = 16 / 2 = 8
+// 3 iteracao -> collatz = 8; PAR collatz = 8 / 2 = 4
+// 4 iteracao -> collatz = 4; PAR collatz = 4 / 2 = 2
+// 5 iteracao -> collatz = 2; PAR collatz = 2 /2 = 1
+// PARA
 
 // Escreva um loop em Javascript
 // que gera uma lista com 100
 // número randomicos.
+let arr = []
+for (let i = 0; i < 100; i++) {
+	arr.push(Math.floor(Math.random() * 100))
+}
+// ou...
+while (arr.length < 100) {
+	arr.push(Math.floor(Math.random() * 100))
+}
+// ou...
+do {
+	arr.push(Math.floor(Math.random() * 100))
+ } while (arr.length < 99)
 
 // Escreva um loop em Javascript
 // que "lance uma moeda" a cada 
@@ -131,3 +143,22 @@ console.log("soma", soma)
 // 0 = coroa. Rode esse loop 1000 vezes e
 // printe o numero de caras e o numero
 // de coroas no console.
+let cara = 0
+let coroa = 0
+for (let i = 0; i < 1000; i++) {
+	let moeda = Math.floor(Math.random() * 2)
+	if (moeda === 1) {
+		cara++
+	} else {
+		coroa++
+	}
+}
+// ou...
+while (cara + coroa < 1000) {
+	let moeda = Math.floor(Math.random() * 2)
+	if (moeda === 1) {
+		cara++
+	} else {
+		coroa++
+	}
+}
