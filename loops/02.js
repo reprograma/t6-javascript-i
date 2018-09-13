@@ -24,6 +24,7 @@ for (let i = 0; i < 5; i++) {
 }
 // ou..
 // nao pratico, porque? referencias.
+// ref: https://codeburst.io/explaining-value-vs-reference-in-javascript-647a975e12a0
 let matriz = []
 let linha = []
 for (let i = 0; i < 5; i++) {
