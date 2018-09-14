@@ -45,29 +45,79 @@ pokemon.fly = function () {
 // `do_something` ao seu pokemon
 // que retorna randomicamente uma 
 // das Strings "FIGHT", "BAG" ou "RUN".
-
-
-
+pokemon.do_something = function () {
+	let acoes = ["FIGHT", "BAG", "RUN"]
+	return acoes[Math.floor(Math.random() * acoes.length)]
+}
+// ou...
+pokemon.do_something = function () {
+	const rand = Math.floor(Math.random() * 3)
+	if (rand === 0) {
+		return "FIGHT"
+	} else if (rand === 1) {
+		return "BAG"
+	} else {
+		return "RUN"
+	}
+}
 
 // 6.
 // Adicione um método chamado
 // `ask` ao seu pokemon que printa
-// no console "What will < > do?" e
+// no console "What will <NOME DO POKEMON> do?" e
 // retorna o resultado do metodo
 // `do_something`.
-
-
-
+pokemon.ask = function () {
+	console.log(`What will ${this.nome} do?`)
+	return this.do_something()
+}
 
 // 7. 
 // Printe todas as propriedades 
 // do seu pokemon no console.
-
-
-
+for (const prop in pokemon) {
+	console.log(prop)
+}
 
 // 8. 
 // Printe todas as propriedades
 // e seus respectivos valores no
 // console no seguinte formato:
 // <propriedade>: <valor>
+for (const prop in pokemon) {
+	console.log(`${prop}: ${pokemon[prop]}`)
+}
+
+// 9.
+// Crie uma funcao construtora
+// de um pokemon generico.
+// function (nome, nome_japones) {}
+function Pokemon(nome, nome_japones, pode_voar) {
+	this.nome = nome
+	this.nome_japones = nome_japones
+	this.pode_voar = pode_voar
+	this.diga_ola = function () {
+		console.log(`Hello, my name is ${this.nome}. And my name in Japanese is ${this.nome_japones}.`)
+	}
+	this.voe = function () {
+		if (this.pode_voar) {
+			return "É nóis que voa bruxão!"
+		} else {
+			return "I believe I can fly, but I can't..."
+		}
+	}
+	this.manda_ver = function () {
+		let acoes = [
+			"Desce a porrada", 
+			"Deu ruim", 
+			"Ash, vambora daqui"
+		]
+		return acoes[Math.floor(Math.random() * acoes.length)]
+	}
+	this.pergunte = function () {
+		console.log(`O que ${this.nome} vai fazer?`)
+		return this.manda_ver()
+	}
+}
+
+
